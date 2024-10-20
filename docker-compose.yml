@@ -1,0 +1,28 @@
+---
+services:
+  mouy-web:
+    image: mouy-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: mouy-web
+    ports:
+      - '3000:3000'
+    command: yarn start
+    # volumes:
+    #   - '.:/app'
+    env_file:
+      - path: .env
+        required: false
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.mouy-web.rule=Host(`c.mouy.one`)' # will use the wildcard subdomain certificate
+      - 'traefik.http.routers.mouy-web.entrypoints=websecure'
+      - 'traefik.http.services.mouy-web.loadbalancer.server.port=3000'
+    networks:
+      - traefik-net
+
+networks:
+  traefik-net:
+    external: true

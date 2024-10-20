@@ -30,8 +30,6 @@ export function DigitalCardView({ userId }: Props) {
     return <NotFoundView />;
   }
 
-  console.log('userDigitalCard', userDigitalCard);
-
   return (
     <Box
       sx={{
