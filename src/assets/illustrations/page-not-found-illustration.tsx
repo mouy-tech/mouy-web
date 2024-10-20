@@ -18,13 +18,13 @@ type Props = BoxProps & {
 function PageNotFoundIllustration({ hideBackground, sx, ...other }: Props) {
   const theme = useTheme();
 
-  const PRIMARY_LIGHT = theme.vars.palette.primary.light;
+  const PRIMARY_LIGHT = theme.vars.palette.info.light;
 
-  const PRIMARY_MAIN = theme.vars.palette.primary.main;
+  const PRIMARY_MAIN = theme.vars.palette.info.main;
 
-  const PRIMARY_DARK = theme.vars.palette.primary.dark;
+  const PRIMARY_DARK = theme.vars.palette.info.dark;
 
-  const PRIMARY_DARKER = theme.vars.palette.primary.darker;
+  const PRIMARY_DARKER = theme.vars.palette.info.darker;
 
   return (
     <Box

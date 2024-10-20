@@ -4,7 +4,7 @@ import { Button } from '@mui/material';
 
 import { SvgColor } from 'src/components/svg-color';
 
-import { socialMediaIcon, SocialMediaType } from './utils';
+import { socialMediaIcon } from './utils';
 
 type IProps = {
   socialMedia: IUserSocialMedia;
@@ -18,15 +18,18 @@ export function DigitalCardSocialMediaBtn({ socialMedia }: IProps) {
       target="_blank"
       rel="noopener noreferrer"
       sx={{
-        py: '16px !important',
+        maxHeight: 50,
+        maxWidth: 50,
+        minHeight: 50,
+        minWidth: 50,
       }}
-      variant="contained"
       size="medium"
+      variant="contained"
     >
       <SvgColor
-        src={socialMediaIcon(SocialMediaType.MOUY)}
-        sx={{ width: 32, height: 32 }}
-        color="secondary.lighter"
+        src={socialMediaIcon(socialMedia.type)}
+        sx={{ width: 28, height: 28 }}
+        color="primary.lighter"
       />
     </Button>
   );

@@ -30,26 +30,23 @@ export function DigitalCardView({ userId }: Props) {
     return <NotFoundView />;
   }
 
-  // Render content
+  console.log('userDigitalCard', userDigitalCard);
+
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'space-between',
-        minHeight: '100vh',
+        justifyContent: 'space-evenly',
         p: 2,
         gap: 2,
-        width: '100%',
+        width: 1,
       }}
     >
       <DigitalCardCopyright />
       <DigitalCardProfile
-        name={userDigitalCard?.userProfile.displayName || ''}
-        company={userDigitalCard?.userProfile.company || null}
-        position={userDigitalCard?.userProfile.position || null}
-        picture={userDigitalCard?.userProfile.imageUrl || null}
+        userProfile={userDigitalCard?.userProfile}
         socialMedias={userDigitalCard?.socialMedias || []}
       />
       <DigitalCardPoweredBy />

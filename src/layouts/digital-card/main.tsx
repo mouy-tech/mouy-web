@@ -18,7 +18,7 @@ export function Main({ children, sx, ...other }: BoxProps) {
 
   return (
     <Box
-      bgcolor="secondary.main"
+      bgcolor="primary.main"
       component="main"
       className={layoutClasses.main}
       sx={{
@@ -36,10 +36,10 @@ export function Main({ children, sx, ...other }: BoxProps) {
           alignItems: 'center',
           width: '100%',
           minWidth: '300px',
-          minHeight: '100vh',
           margin: '0 auto',
+          minHeight: '100vh',
           [theme.breakpoints.up(layoutQuery)]: {
-            maxWidth: '600px',
+            maxWidth: '420px',
           },
           backgroundSize: 'cover',
           backgroundPosition: 'right',

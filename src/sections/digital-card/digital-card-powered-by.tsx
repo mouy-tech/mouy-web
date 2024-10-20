@@ -8,7 +8,7 @@ export function DigitalCardPoweredBy() {
       sx={{
         py: { xs: 1, sm: 1.5 },
         px: 1.5,
-        backgroundColor: 'secondary.lighter',
+        backgroundColor: 'primary.lighter',
         borderRadius: 2,
         width: 1,
         display: 'flex',

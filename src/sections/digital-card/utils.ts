@@ -3,6 +3,7 @@ import { CONFIG } from "src/config-global";
 export enum SocialMediaType {
   TELEGRAM = 'telegram',
   TWITTER = 'twitter',
+  X = 'x',
   FACEBOOK = 'facebook',
   INSTAGRAM = 'instagram',
   LINKEDIN = 'linkedin',
@@ -21,7 +22,7 @@ export enum SocialMediaType {
   WWW = 'www',
   KAKAO = 'kakao',
   LINE = 'line',
-  MOUY = 'www',
+  MOUY = 'mouy',
 }
 
 const iconUrl = (icon: string) => `${CONFIG.assetsDir}/assets/icons/socials/ic-${icon}.svg`;
@@ -38,7 +39,7 @@ export const socialMediaIcon = (type: string) => {
   }
 }
 
-export const defaultProfile = `${CONFIG.assetsDir}/assets/background/default-profile.png`;
+export const defaultProfile = `${CONFIG.assetsDir}/assets/background/placeholder.png`;
 
 export const logo = `${CONFIG.assetsDir}/logo/logo-single.png`;
 

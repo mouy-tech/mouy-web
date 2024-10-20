@@ -21,12 +21,12 @@ export function NotFoundView() {
       <Container component={MotionContainer}>
         <m.div variants={varBounce().in}>
           <Typography variant="h3" sx={{ mb: 2 }}>
-            Sorry, page not found!
+            Sorry, card not found!
           </Typography>
         </m.div>
 
         <m.div variants={varBounce().in}>
-          <Typography sx={{ color: 'text.secondary' }}>
+          <Typography sx={{ color: 'text.primary' }}>
             Sorry, we couldn’t find the digital name card you’re looking for. Perhaps you’ve
             mistyped URL or QR? Be sure to check your with your partner.
           </Typography>
