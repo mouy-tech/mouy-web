@@ -1,5 +1,7 @@
 import { Box, Button, Typography } from '@mui/material';
 
+import { CONFIG } from 'src/config-global';
+
 import { logo } from './utils';
 
 export function DigitalCardPoweredBy() {
@@ -30,6 +32,8 @@ export function DigitalCardPoweredBy() {
         </Typography>
       </Box>
       <Button
+        component="a"
+        href={CONFIG.downloadAppUrl}
         variant="contained"
         size="small"
         sx={{

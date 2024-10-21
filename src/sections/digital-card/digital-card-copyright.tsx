@@ -1,12 +1,8 @@
 import { Box, Typography } from '@mui/material';
 
-import { CONFIG } from 'src/config-global';
-
 export function DigitalCardCopyright() {
   return (
     <Box
-      component="a"
-      href={CONFIG.downloadAppUrl}
       sx={{
         py: 1,
         px: 2,
