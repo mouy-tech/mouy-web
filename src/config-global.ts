@@ -8,6 +8,7 @@ export type ConfigValue = {
   appVersion: string;
   serverUrl: string;
   assetsDir: string;
+  downloadAppUrl: string;
   isStaticExport: boolean;
   auth: {
     method: 'jwt' | 'amplify' | 'firebase' | 'supabase' | 'auth0';
@@ -37,6 +38,7 @@ export const CONFIG: ConfigValue = {
   serverUrl: process.env.NEXT_PUBLIC_SERVER_URL ?? '',
   assetsDir: process.env.NEXT_PUBLIC_ASSETS_DIR ?? '',
   isStaticExport: JSON.parse(`${process.env.BUILD_STATIC_EXPORT}`),
+  downloadAppUrl: process.env.NEXT_PUBLIC_DOWNLOAD_APP_URL || 'https://s.mouy.one/download',
   /**
    * Auth
    * @method jwt | amplify | firebase | supabase | auth0

@@ -15,14 +15,13 @@ services:
     env_file:
       - path: .env
         required: false
-    labels:
-      - 'traefik.enable=true'
-      - 'traefik.http.routers.mouy-web.rule=Host(`c.mouy.one`)' # will use the wildcard subdomain certificate
-      - 'traefik.http.routers.mouy-web.entrypoints=websecure'
-      - 'traefik.http.services.mouy-web.loadbalancer.server.port=3000'
-    networks:
-      - traefik-net
-
-networks:
-  traefik-net:
-    external: true
+    # labels:
+    #   - 'traefik.enable=true'
+    #   - 'traefik.http.routers.mouy-web.rule=Host(`c.mouy.one`)' # will use the wildcard subdomain certificate
+    #   - 'traefik.http.routers.mouy-web.entrypoints=websecure'
+    #   - 'traefik.http.services.mouy-web.loadbalancer.server.port=3000'
+    # networks:
+    #   - traefik-net
+# networks:
+#   traefik-net:
+#     external: true
