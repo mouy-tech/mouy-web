@@ -33,7 +33,7 @@ EMAIL;type=INTERNET;type=HOME;type=pref:${userProfile.email || ''}
 PHOTO;ENCODING=b;TYPE=JPEG:${imageBase64.split(',')[1]}
 NOTE:Powered by Mouy
 item1.X-ABLabel:_$!<HomePage>!$_
-item2.URL:https://c.mouy.one/c/${userProfile.id}
+item2.URL:https://ca.mouy.one/${userProfile.id}
 item2.X-ABLabel:My Smart Business Card
 END:VCARD`;
 
