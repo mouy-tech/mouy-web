@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     container_name: mouy-web
     ports:
-      - '8088:3000'
+      - '8088:3033'
     command: yarn start
     # volumes:
     #   - '.:/app'
