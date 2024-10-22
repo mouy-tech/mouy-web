@@ -26,8 +26,10 @@ export function DigitalCardPoweredBy() {
           flexDirection: 'column',
         }}
       >
-        <Typography variant="subtitle2">Powered by Mouy</Typography>
-        <Typography variant="body2" noWrap={false}>
+        <Typography variant="subtitle2" fontSize={14}>
+          Powered by Mouy
+        </Typography>
+        <Typography variant="body2" fontSize={12} noWrap={false}>
           Seamless way to collect, connect, recal any contacts.
         </Typography>
       </Box>

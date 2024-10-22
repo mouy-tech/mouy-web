@@ -89,7 +89,6 @@ END:VCARD`;
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
-            gap: 1,
           }}
         >
           <Typography
@@ -129,6 +128,7 @@ END:VCARD`;
               sx={{
                 fontSize: { xs: 18, md: 20 },
                 py: { xs: 1, md: 2 },
+                mt: 1,
                 color: 'primary.lighter',
               }}
             >
@@ -138,6 +138,7 @@ END:VCARD`;
 
           <Box
             sx={{
+              mt: 1,
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
