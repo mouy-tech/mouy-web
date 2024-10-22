@@ -4,8 +4,6 @@ import { isEmpty } from 'lodash';
 
 import { Box, Button, Typography } from '@mui/material';
 
-import { getImageAsBase64 } from 'src/utils/helper';
-
 import { Image } from 'src/components/image';
 
 import { defaultProfile } from './utils';
@@ -18,7 +16,8 @@ type Props = {
 
 export function DigitalCardProfile({ userProfile, socialMedias }: Props) {
   const generateVCard = async () => {
-    const imageBase64 = await getImageAsBase64(userProfile.imageUrl || defaultProfile);
+    // const imageBase64 = await getImageAsBase64(userProfile.imageUrl || defaultProfile);
+    // PHOTO; ENCODING = b; TYPE = JPEG:${ imageBase64.split(',')[1] }
 
     const vCardData = `
 BEGIN:VCARD
@@ -30,7 +29,6 @@ TITLE:${userProfile.position?.replace(/\s/g, ' ') || ''};;
 TEL;TYPE=CELL:${userProfile.phoneNumber || ''}
 TEL;TYPE=CELL:${userProfile.secondPhoneNumber || ''}
 EMAIL;type=INTERNET;type=HOME;type=pref:${userProfile.email || ''}
-PHOTO;ENCODING=b;TYPE=JPEG:${imageBase64.split(',')[1]}
 NOTE:Powered by Mouy
 item1.X-ABLabel:_$!<HomePage>!$_
 item2.URL:https://ca.mouy.one/${userProfile.id}
